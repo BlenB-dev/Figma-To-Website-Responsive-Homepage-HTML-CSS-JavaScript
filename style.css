@@ -1,0 +1,830 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
+:root {
+  box-sizing: border-box;
+  --Orange-color: #da722c;
+  --Dark-blue-color: #023047;
+  --Dark-color: #070917;
+  --Light-color: #e8f7fb;
+  --Light-blue-color: #6f7dfb;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+.btn.dark {
+  background: var(--Dark-blue-color);
+}
+.btn.light {
+  background-color: var(--Orange-color);
+}
+.btn.enrol-icon::before {
+  content: url("icons/PencilAlt.svg");
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+.btn.enrol-icon {
+  padding-left: 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 0px;
+
+  z-index: 100;
+  transition: all 500ms ease;
+}
+nav.scrolled {
+  background-color: var(--Dark-blue-color);
+  box-shadow: 0 16px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+}
+
+nav .logo {
+  color: #fff;
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 900;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+/* Hero Section */
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  position: relative;
+  color: #fff;
+}
+
+.hero-section .left h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
+  margin-bottom: 0;
+}
+.hero-section .left {
+  flex: 1;
+}
+.hero-section .left p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  margin-bottom: 30px;
+  width: 457px;
+}
+.hero-section .right {
+  align-self: flex-end;
+}
+.hero-section .right img {
+  height: 520px;
+  vertical-align: middle;
+  margin-left: 350px;
+}
+/* Achievement Cards */
+.achievement-card {
+  position: absolute;
+  min-width: 200px;
+}
+
+.achievement-card .content {
+  border-radius: 24px;
+  background-color: white;
+  padding: 8px 32px;
+  z-index: 10;
+  position: relative;
+}
+.achievement-card.students-enrolled {
+  left: 49%;
+  top: 270px;
+}
+.achievement-card h3 {
+  color: var(--Dark-blue-color);
+
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+.achievement-card img {
+  flex: 1;
+  height: 42px;
+  margin-left: -24px;
+}
+.achievement-card p {
+  color: var(--Dark-blue-color);
+
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+.achievement-card .bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
+.achievement-card.overall-rating {
+  left: 47%;
+  top: 470px;
+}
+nav.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
+
+.achievement-card .content div {
+  display: flex;
+}
+/* testimonials-section */
+.section {
+  margin-top: 100px;
+}
+h2 {
+  color: var(--Dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  margin: 0;
+  font-weight: 900;
+}
+h2.light {
+  color: white;
+}
+section p {
+  color: var(--Dark-blue-color);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  margin: 12px 0;
+}
+.testimonials-section {
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+}
+.testimonials-section .mobile-btn {
+  display: none;
+  align-items: center;
+}
+.testimonials-section .testimonial-card {
+  width: 442px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  position: relative;
+}
+.testimonials-section .testimonial-card::before {
+  content: "";
+  width: 28px;
+  height: 40px;
+  position: absolute;
+  background-color: var(--Dark-blue-color);
+  border-radius: 24px;
+  top: -40px;
+  left: 60px;
+  border-radius: 24px 24px 0 0;
+}
+.testimonials-section .testimonial-card:last-child::before {
+  left: 40px;
+  top: -50px;
+  border-radius: 0 0 24px 24px;
+  height: calc(100% + 90px);
+  z-index: -1;
+}
+.testimonial-card .content {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 150%; /* 27px */
+  border-radius: 24px;
+  color: white;
+  padding: 24px 32px;
+  background-color: var(--Light-blue-color);
+}
+.testimonials-section .testimonial-card:last-child .content {
+  background-color: var(--Orange-color);
+}
+.testimonial-card .info h4 {
+  color: var(--Dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 900;
+  line-height: 120%; /* 28.8px */
+}
+.testimonial-card .info {
+  padding: 24px 32px;
+  background: white;
+  border-radius: 24px;
+}
+.testimonial-card .info p.company {
+  color: var(--Dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+}
+
+.testimonial-card img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 120px;
+}
+.testimonials-section .testimonial-card:last-child {
+  transform: translateX(20px);
+}
+.testimonials-section .features {
+  margin-bottom: 30px;
+}
+
+/* Coursed Section */
+.courses-section {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  padding: 70px 0;
+  padding-bottom: 120px;
+}
+.courses-section h2 {
+  text-align: center;
+}
+.courses-section .course-cards {
+  display: flex;
+  gap: 70px;
+}
+
+.courses-section .course-cards img {
+  width: 100%;
+  border-radius: 24px;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+}
+.course-cards .course-card {
+  border-radius: 24px;
+  background: #fff;
+  padding: 0 32px;
+  margin: 40px 0;
+  position: relative;
+}
+.courses-section .course-card::after {
+  content: "";
+  position: absolute;
+  border-radius: 24px;
+  height: 8px;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  background: var(--Dark-blue-color);
+}
+.course-card h3 {
+  color: var(--Dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+
+  font-weight: 900;
+  line-height: 150%; /* 45px */
+  position: relative;
+}
+.course-card .info {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-card .info .duration {
+  color: var(--Dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 150%; /* 24px */
+  white-space: nowrap;
+  position: relative;
+  padding-left: 20px;
+}
+.courses-section .course-card .duration::before {
+  content: url("icons/Clock.svg");
+  position: absolute;
+  top: 2px;
+  left: -6px;
+}
+/* .courses-section .wrapper {
+  position: relative;
+}
+.courses-section .wrapper .btn {
+  position: absolute;
+  right: 0;
+} */
+/* Getapp's */
+.app-section {
+  margin-top: 100px;
+}
+.app-section h2 {
+  color: var(--Dark-blue-color);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 120%; /* 72px */
+}
+.app-section p {
+  color: var(--Dark-blue-color);
+  text-align: center;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+}
+.app-section .app-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+.app-section .app-btn {
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  min-width: 310px;
+  padding: 16px 31px;
+  align-items: center;
+  gap: 14px;
+  background-color: #070917;
+}
+.app-section .app-buttons .app-btn img {
+  width: 60px;
+  height: 60px;
+}
+.app-buttons .app-btn span {
+  color: #fff;
+
+  font-size: 20px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+footer {
+  margin-top: 100px;
+  background-color: var(--Dark-color);
+  color: white;
+  padding: 70px 0;
+}
+.links ul {
+  list-style: none;
+  padding-left: 20px;
+}
+footer ul li {
+  margin: 16px 0;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+}
+.links h3 {
+  color: var(--Orange-color);
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+.social {
+  display: flex;
+  gap: 28px;
+  margin-left: 20px;
+}
+footer form {
+  margin-left: 20px;
+  margin-top: 16px;
+  position: relative;
+}
+footer form input {
+  color: #000;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  border-radius: 8px;
+  padding: 8px 160px 8px 32px;
+  border: none;
+  width: 100%;
+}
+.submit-btn {
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--Dark-blue-color);
+  border-radius: 8px;
+  position: absolute;
+  padding: 8px 32px;
+  border: none;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.copyright {
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 36px;
+}
+@media (max-width: 1100px) {
+  .btn {
+    padding: 12px 32px;
+  }
+  .wrapper .hero-section {
+    padding: 0 100px;
+    overflow: hidden;
+  }
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 36px 100px;
+  }
+  nav.scrolled {
+    padding: 16px 100px;
+  }
+  header,
+  .hero-section,
+  header .wrapper {
+    max-height: 1000px;
+  }
+  .hero-section {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .hero-section .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-section .btn {
+    align-self: flex-start;
+  }
+  .hero-section .left h1 {
+    font-size: 50px;
+    line-height: 125%;
+  }
+  .hero-section .right img {
+    height: 580px;
+  }
+  .hero-section .achievement-card {
+    position: relative;
+    margin-bottom: 80px;
+  }
+  .achievement-card.students-enrolled,
+  .achievement-card.overall-rating {
+    left: unset;
+    top: unset;
+    bottom: 450px;
+  }
+  .hero-section .achievement-cards {
+    align-self: flex-start;
+    margin: 40px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .testimonials-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .testimonials-section .testimonial-card {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .testimonials-section .testimonial-card:last-child::before {
+    top: -40px;
+    left: 60px;
+    height: calc(100% + 80px);
+  }
+  .testimonials-section .testimonial-card:last-child {
+    transform: translateX(0px);
+    margin-bottom: 0;
+  }
+  .testimonials-section .desktop-btn {
+    display: none;
+  }
+  .testimonials-section .mobile-btn {
+    display: block;
+    align-self: flex-start;
+    order: 3;
+    margin-bottom: 100px;
+  }
+  .testimonials-section .right {
+    order: 1;
+  }
+  .testimonials-section .left {
+    order: 2;
+  }
+  .testimonials-section h2 {
+    margin-bottom: 20px;
+  }
+  .courses-section .course-cards {
+    flex-direction: column;
+    gap: 80px;
+  }
+  .courses-section .course-cards {
+    margin: 0;
+  }
+  .courses-section .course-card img {
+    height: 260px;
+    object-fit: cover;
+  }
+  .courses-section .course-card h3 {
+    font-size: 24px;
+  }
+  .hero-section .left h1 {
+    margin-top: 160px;
+  }
+  .course-cards .course-card:last-child {
+    margin-bottom: 50px;
+  }
+  footer .links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .links-container .links:last-child {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1098px) {
+  .hero-section .left h1 {
+    font-size: 36px;
+  }
+  .hero-section .left h1 {
+    margin-top: 140px;
+  }
+  nav {
+    padding: 6px 100px;
+    white-space: nowrap;
+  }
+  .hero-section .right img {
+    margin-top: -280px;
+    height: 600px;
+  }
+  .hero-section .right {
+    transform: translateX(100px);
+  }
+  .achievement-card h3 {
+    font-size: 30px;
+  }
+  .hero-section .right img {
+    height: 600px;
+  }
+
+  .achievement-card h3 {
+    font-size: 30px;
+  }
+  .hero-section .achievement-card p {
+    white-space: nowrap;
+  }
+  .hero-section .achievement-cards {
+    display: flex;
+    gap: 150px;
+  }
+  .hero-section .achievement-card {
+    margin-top: 100px;
+    margin-left: -120px;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 0 32px;
+    overflow: hidden;
+  }
+  .hero-section .left h1 {
+    margin-top: 60px;
+  }
+  nav {
+    display: none;
+  }
+  nav.mobile-nav {
+    display: flex;
+  }
+  nav.mobile-nav.scrolled {
+    padding: 8px 100px;
+    background-color: var(--Light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+  }
+  .mobile-menu-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--Dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+  .mobile-menu-container.active {
+    left: 0;
+  }
+  .mobile-menu-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+  .mobile-menu-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  .mobile-menu-container ul li {
+    margin: 30px 0;
+    text-align: center;
+  }
+  .mobile-menu-container ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .hero-section .left p {
+    width: 100%;
+  }
+  .app-section .app-buttons {
+    flex-direction: column;
+  }
+  nav.mobile-nav {
+    padding: 32px;
+  }
+  nav.mobile-nav.scrolled {
+    padding: 8px 32px;
+  }
+  .mobile-menu-container .close-icon {
+    right: 32px;
+  }
+  .hero-section .left h1 {
+    font-size: 36px;
+  }
+  .hero-section .right img {
+    display: none;
+  }
+  .hero-section .right {
+    transform: translateX(100px);
+  }
+  .achievement-card h3 {
+    font-size: 30px;
+  }
+  .hero-section .achievement-card {
+    margin-bottom: 48px;
+  }
+  .hero-section .achievement-cards {
+    display: none;
+  }
+  .achievement-card p {
+    white-space: nowrap;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  .testimonials-section .testimonial-card .info h4 {
+    font-size: 18px;
+  }
+  .testimonials-section .testimonial-card img {
+    height: 100px;
+    width: 100px;
+  }
+  footer .links-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  footer ul {
+    padding: 0;
+  }
+  .social {
+    justify-content: center;
+    align-items: center;
+  }
+  footer .links-container .links:last-child {
+    grid-column: 1/2;
+  }
+  footer form .submit-btn {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  footer .copyright {
+    margin-top: 80px;
+    text-align: center;
+  }
+  footer form input {
+    padding: 8px 32px;
+  }
+}
+@media (max-width: 400px) {
+  .hero-section .left h1 {
+    width: 100%;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-section .left p {
+    display: none;
+  }
+  .hero-section .left .btn {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    white-space: nowrap;
+    text-align: center;
+  }
+}
