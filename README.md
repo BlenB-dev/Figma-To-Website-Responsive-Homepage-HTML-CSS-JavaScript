@@ -1,1 +1,5 @@
 ![image_url](https://github.com/BlenB-dev/Figma-To-Website-Responsive-Homepage-HTML-CSS-JavaScript/blob/main/Screenshot%202025-03-26%20171300.png?raw=true)
+![image_url](https://github.com/BlenB-dev/Figma-To-Website-Responsive-Homepage-HTML-CSS-JavaScript/blob/main/Screenshot%202025-03-26%20171327.png?raw=true)
+![image_url](https://github.com/BlenB-dev/Figma-To-Website-Responsive-Homepage-HTML-CSS-JavaScript/blob/main/Screenshot%202025-03-26%20171352.png?raw=true)
+![image_url](https://github.com/BlenB-dev/Figma-To-Website-Responsive-Homepage-HTML-CSS-JavaScript/blob/main/Screenshot%202025-03-26%20171408.png?raw=true)
+![image_url](https://github.com/BlenB-dev/Figma-To-Website-Responsive-Homepage-HTML-CSS-JavaScript/blob/main/Screenshot%202025-03-26%20172103.png?raw=true)
